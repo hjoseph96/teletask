@@ -80,5 +80,4 @@ test:
 production:
   <<: *default
   database: sms_sender_production
-  username: sms_sender
-  password: <%= ENV["SMS_SENDER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'].present? %>
