@@ -1,0 +1,33 @@
+<nav class="navbar nav-teletask" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: 'navbar-item' do %>
+      <%= image_tag 'teletask_logo.png' %>
+    <% end %>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <% if current_user %>
+            <%= link_to "Logout", destroy_user_session_path, method: 'delete' %>
+          <% else %>
+            <%= link_to new_user_registration_path, class: 'button is-primary'  do %>
+              <strong>Sign up</strong>
+            <% end %>
+
+            <%= link_to new_user_session_path, class: 'button is-light'  do %>
+              Log In
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

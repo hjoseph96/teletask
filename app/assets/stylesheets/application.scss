@@ -1,0 +1,18 @@
+// Sassy
+@use "bulma";
+
+.centered-form {
+  width: 29vw;
+  margin: 3vw auto;
+  background: aliceblue;
+  padding: 2em;
+  color: black;
+  border-radius: 1em;
+  border: 3px solid #6d6d6d;
+}
+
+.nav-teletask {
+  background: cadetblue;
+  padding: 0.8em 3em;
+  a { color: black; }
+}
